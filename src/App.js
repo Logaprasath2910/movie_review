@@ -6,15 +6,14 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import MovieFeedback from './components/MovieFeedback';
 import ViewFeedback from './components/ViewFeedback';
+import FeedbackForm from './components/FeedbackForm';
 
 function App() {
   return (
-    
     <Router>
     <div className="App">
-      <h1>Movie Feedbck </h1>
+      <h1>Movie Feedback </h1>
 
       <div className='tabs'>
         <Link to ="/movie"  className="tab-link">
@@ -28,8 +27,8 @@ function App() {
 
       {/*{Routes} */}
       <Routes>
-        <Route path="/" element={<Navigate to = " /student"/>} />
-        <Route path="/movie" element ={<MovieFeedback/>}/>
+        <Route path="/" element={<Navigate to = " /"/>} />
+        <Route path="/movie" element ={<FeedbackForm/>}/>
         <Route path="/view" element ={<ViewFeedback/>}/>
       </Routes>
 

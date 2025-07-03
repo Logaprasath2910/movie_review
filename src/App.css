@@ -1,69 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap');
 
-.App{
-  font-family:"Libertinus Math", system-ui;
+/* General app styling */
+.App {
+  font-family: "Libertinus Math", system-ui, sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 30px;
+  min-height: 100vh;
+  background: #f9f9f9;
 }
 
-.form-container{
-  width: 350px;
+/* Form container styling */
+.form-container {
+  width: 100%;
+  max-width: 400px;
   padding: 30px;
   border: 2px solid rgb(133, 200, 251);
-  border-radius: 30px;
-  box-shadow: 3px 3px 50px gray;
-  margin: 30px;
-}
-.form-container div{
-  margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin: 30px auto;
+  transition: box-shadow 0.3s ease;
 }
 
-label{
+.form-container:hover {
+  box-shadow: 0 6px 60px rgba(0, 0, 0, 0.15);
+}
+
+.form-container div {
+  margin-bottom: 15px;
+}
+
+label {
   display: block;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
 }
 
-input,select{
+input,
+select {
   width: 100%;
-  padding: 7px;
+  padding: 10px 70px;
+  border: 3px solid #cce4e7;
+  border-radius: 20px;
   box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-button{
+input:focus,
+select:focus {
+  border-color: rgb(133, 200, 251);
+  outline: none;
+  box-shadow: 0 0 5px rgba(133, 200, 251, 0.5);
+}
+
+button {
   cursor: pointer;
   height: 50px;
-  width: 120px;
+  width: 150px;
   background-color: rgb(246, 176, 106);
-  color: white;
-  text-align: center;
-  font-size: medium;
-}
-button:hover{
-  background-color: white;
-  color: rgb(240, 201, 130);
-}
-.tabs{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.tab-link{
-  text-decoration: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: 2px solid rgb(230, 173, 229);
+  color: #fff;
+  border: none;
   border-radius: 5px;
-  color: rgb(226, 204, 204);
+  text-align: center;
+  font-size: 1rem;
   font-weight: bold;
-  height: 30px;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tab-link:hover{
+button:hover {
+  background-color: white;
+  color: rgb(246, 176, 106);
+  border: 2px solid rgb(246, 176, 106);
+}
+
+/* Navigation tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.tab-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px 10px;
+  border: 2px solid rgb(230, 173, 229);
+  border-radius: 30px;
+  color: rgb(122, 122, 122);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tab-link:hover {
   background-color: rgb(122, 221, 248);
   color: white;
+  border-color: rgb(122, 221, 248);
 }
